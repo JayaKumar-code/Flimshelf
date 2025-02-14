@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Movie Collection</h1>
+    <div class="container">
+        <div class="category" onclick="openForm('Horror')">
+            <img src="horror.avif" alt="Horror">
+            <p>Horror</p>
+        </div>
+        <div class="category" onclick="openForm('Drama')">
+            <img src="drama.jpeg" alt="Drama">
+            <p>Drama</p>
+        </div>
+        <div class="category" onclick="openForm('Romantic')">
+            <img src="romantic.jpeg" alt="Romantic">
+            <p>Romantic</p>
+        </div>
+        <div class="category" onclick="openForm('Emotional')">
+            <img src="emotional.jpeg" alt="Emotional">
+            <p>Emotional</p>
+        </div>
+    </div>
+
+    <div id="movieForm" class="hidden">
+        <h2>Add Movie to <span id="selectedCategory"></span></h2>
+        <input type="text" id="movieName" placeholder="Movie Name"><br>
+        <input type="text" id="actorName" placeholder="Actor Name"><br>
+        <textarea id="movieAbout" placeholder="About Movie"></textarea><br>
+        <button onclick="addMovie()">Add</button>
+        <button onclick="closeForm()">Cancel</button>
+    </div>
+
+    <div id="movieCollections" class="container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
